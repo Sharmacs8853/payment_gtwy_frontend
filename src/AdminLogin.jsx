@@ -1,10 +1,7 @@
 import { Box, Button, Flex, Heading, Input, Stack } from '@chakra-ui/react'
 import React, { useEffect, useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import Navbar from './Navbar'
-import { login } from './Redux/auth/action'
-import { Link } from 'react-router-dom'
 import axios from 'axios'
 
 
@@ -30,7 +27,7 @@ const AdminLogin = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        axios.post(`http://localhost:4000/admin/login`, formData)
+        axios.post(`https://payment-gtwy.onrender.com/admin/login`, formData)
             .then((result) => {
                 console.log("admin login", result.data);
                 setToken(result.data.token)

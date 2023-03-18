@@ -16,7 +16,7 @@ const Services = () => {
     }
 
     useEffect(() => {
-        axios.get(`http://localhost:4000/services/get`)
+        axios.get(`https://payment-gtwy.onrender.com/services/get`)
             .then((result) => {
                 setServices(result.data)
             }).catch((err) => {
@@ -25,8 +25,8 @@ const Services = () => {
     }, [])
 
     const checkoutHandler = async (amount) => {
-        const { data: { key } } = await axios.get("http://www.localhost:4000/api/getkey")
-        const { data: { order } } = await axios.post("http://localhost:4000/api/checkout", {
+        const { data: { key } } = await axios.get("https://payment-gtwy.onrender.com/api/getkey")
+        const { data: { order } } = await axios.post("https://payment-gtwy.onrender.com/api/checkout", {
             amount
         });
         const options = {

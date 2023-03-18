@@ -14,7 +14,7 @@ const Dashboard = () => {
     const [peyment, setPayments] = useState([]);
 
     useEffect(() => {
-        axios.get(`http://localhost:4000/api/getpayments`)
+        axios.get(`https://payment-gtwy.onrender.com/api/getpayments`)
             .then((result) => {
                 setPayments(result.data)
             }).catch((err) => {

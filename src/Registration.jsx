@@ -26,7 +26,7 @@ const Registration = () => {
     }
 
     const postUserData = (data) => {
-        axios.post(`http://localhost:4000/user/signup`, data)
+        axios.post(`https://payment-gtwy.onrender.com/user/signup`, data)
             .then((result) => {
                 console.log('result', result);
                 alert('added successfully')
