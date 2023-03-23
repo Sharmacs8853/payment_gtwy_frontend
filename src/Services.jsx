@@ -47,7 +47,7 @@ const Services = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        axios.post(`http://localhost:4000/gst/create`, formData)
+        axios.post(`https://payment-gtwy.onrender.com/gst/create`, formData)
             .then((result) => {
                 alert(result.data.msg)
                 console.log('data', result.data)
